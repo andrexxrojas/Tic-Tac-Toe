@@ -1,0 +1,82 @@
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #171717;
+    }
+    .wrapper{
+        font-family: "Outfit", "Neue Montreal", "Reckless Neue", sans-serif;
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper h1{
+        margin-bottom: 10px;
+        font-size: 50px;
+        color: #eeeeee;
+    }
+    .container{
+        display: grid;
+
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(3,100px);
+    }
+    .container div{
+        border: 2px solid #C84B31;
+        border-radius: 10px;
+        color: #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+    }
+    .container div:hover{
+        color: #c84b31;
+    }
+    .container div:active{
+        transform: scale(0.95);
+    }
+    .wrapper button{
+        margin-top: 20px;
+        font-family: "Outfit", "Neue Montreal", "Reckless Neue", sans-serif;
+        font-size: 30px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #C84B31;
+        color: #eeeeee;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe Game</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="whichPlayer">Player: 1</h1>
+        <div class="container">
+            <div id="b1" onclick="box1()">1</div>
+            <div id="b2" onclick="box2()">2</div>
+            <div id="b3" onclick="box3()">3</div>
+            <div id="b4" onclick="box4()">4</div>
+            <div id="b5" onclick="box5()">5</div>
+            <div id="b6" onclick="box6()">6</div>
+            <div id="b7" onclick="box7()">7</div>
+            <div id="b8" onclick="box8()">8</div>
+            <div id="b9" onclick="box9()">9</div>
+        </div>
+        <button onclick="Reset()">Reset</button>
+    </div>
+    <script src="server.js"></script>
+</body>
+</html>
